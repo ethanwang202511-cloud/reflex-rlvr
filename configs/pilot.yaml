@@ -1,0 +1,113 @@
+# Week-1 premise pilot (proposal §1.7, architecture §9 milestone month-1)
+# Budget: ≤ $250 total. Two pre-registered gates fire before any 7B compute.
+
+name: week1_premise_pilot
+project: reflex-rlvr
+seed: 1337
+
+# Base model
+base_model:
+  hf_id: Qwen/Qwen2.5-1.5B
+  layers: 28
+  hidden: 1536
+  variant: base                  # never Instruct/Thinking
+  precision: bfloat16
+  tap_layer: 18                  # ⌊28 * 2/3⌋ = 18 (also where SAE lives)
+
+# Special tokens added via add_special_tokens
+special_tokens:
+  think_open: <think>
+  think_close: </think>
+  latent: <latent>
+
+# Latent register
+latent:
+  S_max: 32
+  S_min: 2
+  eps_max: 0.10                  # cycle-1 value per architecture §3.1
+  schedule: cosine_anneal        # eps_s = eps_max * 0.5 * (1 + cos(pi * s / S_max))
+  dtype_residual: float32        # FP32 inside latent block per architecture §7.1.1
+
+# Gate (a) — discriminator–generator asymmetry
+gate_a:
+  problem_pool: aime_2018_to_2023
+  n_problems: 100
+  n_synthetic: 50                # memorization control
+  step_shuffle_control: true
+  oracle_source: aops_canonical_solutions
+  decision:
+    threshold_p_disc: 0.5
+    threshold_disc_minus_corrupted: 0.2
+    pct_of_problems: 0.6
+    paired_sign_test_alpha: 0.05
+
+# Gate (b) — day-7 pass@8 crossover
+gate_b:
+  rl_steps: 1000
+  problem_subset_n: 100
+  k_for_crossover: 8
+  pivot_rules:
+    proceed_at_smax_32:    {min_ratio: 1.5}
+    pivot_to_smax_16:      {min_ratio: 1.0, max_ratio: 1.5, extra_steps: 500}
+    halve_eps_max:         {trigger_ratio: 1.0, new_eps_max: 0.05}
+    smax_8_eps_05:         {trigger_post_block_ppl_ratio: 1.5}
+    abort_7b:              {trigger_ratio: 1.0, applies_after_diagnostics: true}
+
+# Hard-set mining (initial)
+mining:
+  source: aime_2018_to_2023
+  pass_at_k_budget: 1024
+  rollout_temperature: 0.8
+  top_p: 0.95
+  retain_if: pass_at_1024 == 0
+
+# RL hyperparameters (mirror configs/cycle_1.yaml; subset only for pilot)
+rl:
+  algorithm: grpo
+  group_size: 16
+  rollout_temperature: 0.8
+  top_p: 0.95
+  kl_coef_vs_ref: 0.001
+  ppo_clip: 0.2
+  optimizer: adamw
+  lr_policy: 1.0e-6
+  lr_heads: 5.0e-6
+  warmup_steps: 200
+  effective_batch_prompts: 64    # pilot is smaller than full run
+  rollouts_per_prompt: 16
+  total_steps: 1000              # gate (b) only
+  novelty_beta: 0.0              # pilot does not gate on novelty
+  nsr_lambda: 0.5
+  nsr_confidence_def: mean_token_margin_sigmoid
+
+# GSI cold-start
+gsi:
+  enabled: true
+  k: 64
+  n_calibration_problems: 500
+  n_positions_per_problem: 32
+  off_subspace_noise_pct: 0.05
+  fallback_if_emit_lift_lt_10x: random_init_plus_heuristic_warmup
+
+# Diagnostics (architecture §5.2.1)
+diagnostics:
+  latent_first_step_entropy_every_n_steps: 200
+  halting_entropy_every_n_steps: 200
+  post_block_ppl_check: true
+  post_block_ppl_alarm_ratio: 1.5
+
+# Budget envelope
+budget:
+  total_usd: 250
+  hard_set_mining_usd: 40
+  rl_run_usd: 160
+  premise_test_usd: 30
+  buffer_usd: 20
+
+# Modal scheduling
+modal:
+  gpu: H100
+  n_gpus_train: 4
+  n_gpus_rollout: 4
+  detach: false                  # ALWAYS false
+  retry_on_disconnect: false     # ALWAYS false

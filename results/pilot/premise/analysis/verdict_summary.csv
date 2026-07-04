@@ -1,0 +1,25 @@
+model,slug,n_problems,mean_logit_oracle,mean_logit_corrupted,mean_logit_shuffled,mean_delta_verdict,delta_ci_lo,delta_ci_hi,pct_oracle_above_corrupted,cohens_d_paired,gate_passed
+Gemma-2-9B (base),gemma_9b,51,-0.402,-0.451,-0.5809,0.049,0.0221,0.076,0.412,0.505,False
+gemma_9b_seed271828,gemma_9b_seed271828,51,-0.402,-0.4632,-0.549,0.0613,0.027,0.098,0.412,0.4601,False
+gemma_9b_seed31415,gemma_9b_seed31415,51,-0.402,-0.4657,-0.6005,0.0637,0.0294,0.1029,0.451,0.4785,False
+gemma_9b_seed37,gemma_9b_seed37,51,-0.402,-0.4412,-0.5956,0.0392,0.0098,0.0735,0.314,0.3465,False
+Llama-3.1-8B (base),llama_3p1_8b,51,-0.31,-0.31,-0.4436,0.0,-0.0184,0.0184,0.294,0.0,False
+llama_3p1_8b_seed271828,llama_3p1_8b_seed271828,51,-0.31,-0.3015,-0.44,-0.0086,-0.027,0.0098,0.275,-0.1296,False
+llama_3p1_8b_seed31415,llama_3p1_8b_seed31415,51,-0.31,-0.3272,-0.4596,0.0172,-0.0037,0.0368,0.412,0.2386,False
+llama_3p1_8b_seed37,llama_3p1_8b_seed37,51,-0.31,-0.3137,-0.4534,0.0037,-0.0147,0.0245,0.255,0.0517,False
+llama_3p1_8b_sft,llama_3p1_8b_sft,51,1.0392,-1.6299,-0.1544,2.6691,1.9752,3.4194,0.784,0.9593,True
+Mistral-7B-v0.3 (base),mistral_7b,51,1.0555,1.0242,0.9847,0.0313,0.0125,0.0516,0.588,0.434,False
+mistral_7b_seed271828,mistral_7b_seed271828,51,1.0555,1.0231,1.0163,0.0324,0.015,0.0527,0.627,0.446,True
+mistral_7b_seed31415,mistral_7b_seed31415,51,1.0555,1.022,0.9976,0.0335,0.015,0.0531,0.706,0.4775,True
+mistral_7b_seed37,mistral_7b_seed37,51,1.0555,1.0262,1.0046,0.0293,0.0122,0.0486,0.706,0.4339,True
+Qwen2.5-1.5B (base),qwen_1p5b,51,-0.1225,-0.6569,-0.6912,0.5343,0.3847,0.6912,0.765,0.9615,True
+Qwen2.5-1.5B-Instruct,qwen_1p5b_instruct,51,0.2892,-0.4853,-1.0907,0.7745,0.5342,1.0123,0.725,0.8826,True
+Qwen2.5-72B (base),qwen_72b,51,2.7328,1.1838,1.652,1.549,1.2205,1.88,0.922,1.258,True
+Qwen2.5-7B (base),qwen_7b,51,0.6838,-0.7034,-0.0147,1.3873,1.0416,1.7305,0.804,1.0791,True
+Qwen2.5-7B-Instruct,qwen_7b_instruct,51,0.076,-7.2623,-2.8922,7.3382,5.7448,9.1427,0.922,1.1684,True
+qwen_7b_instruct_seed271828,qwen_7b_instruct_seed271828,51,0.076,-7.3578,-2.902,7.4338,5.8379,9.0614,0.941,1.1353,True
+qwen_7b_instruct_seed31415,qwen_7b_instruct_seed31415,51,0.076,-7.06,-3.6765,7.136,5.3805,8.8653,0.902,1.1319,True
+qwen_7b_instruct_seed37,qwen_7b_instruct_seed37,51,0.076,-7.0221,-3.1814,7.098,5.3379,8.7868,0.922,1.1295,True
+DeepSeek-R1-Distill-Llama-8B,r1_llama_8b,51,-3.1667,-4.152,-3.6593,0.9853,0.6861,1.282,0.882,0.9424,True
+DeepSeek-R1-Distill-Qwen-1.5B,r1_qwen_1p5b,51,-1.239,-1.3934,-1.239,0.1544,0.0944,0.2279,0.667,0.6716,True
+DeepSeek-R1-Distill-Qwen-7B,r1_qwen_7b,51,-4.1826,-4.5233,-3.3603,0.3407,0.2365,0.4461,0.725,0.8709,True

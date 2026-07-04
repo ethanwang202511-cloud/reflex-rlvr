@@ -1,0 +1,9 @@
+name: cycle_4_main_7b
+cycle_index: 4
+inherits: cycle_1.yaml
+
+latent:
+  eps_max: 0.20
+
+mining:
+  refresh_against_current_base: true   # refresh every 2 cycles

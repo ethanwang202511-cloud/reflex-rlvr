@@ -1,0 +1,9 @@
+# Cycle 3 — eps_max = 0.20 (locked from cycle 3 onward).
+# Inherits from cycle_1.yaml; overrides only what changes.
+
+name: cycle_3_main_7b
+cycle_index: 3
+inherits: cycle_1.yaml
+
+latent:
+  eps_max: 0.20

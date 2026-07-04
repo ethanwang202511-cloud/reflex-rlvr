@@ -1,0 +1,60 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.installed.cfg
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.cache/
+.tox/
+.mypy_cache/
+
+# --- Virtual envs ---
+.venv/
+venv/
+env/
+.uv-cache/
+
+# --- Editor / OS ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# --- Project ---
+# Datasets and model artifacts are too large to version; provenance is
+# recorded in data/README.md and the mining scripts.
+data/*
+!data/README.md
+results/cache/
+results/checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.npz.tmp
+
+# Build outputs (regenerable)
+paper/
+figures/output/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Wandb local cache
+wandb/
+
+# Internal planning docs
+overview/
+proposal.md
+architecture.md
+*.zip

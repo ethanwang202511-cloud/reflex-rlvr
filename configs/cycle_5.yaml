@@ -1,0 +1,9 @@
+name: cycle_5_main_7b
+cycle_index: 5
+inherits: cycle_1.yaml
+
+latent:
+  eps_max: 0.20
+
+# Cycle 5 may early-stop if Δ_cycle < 0.005 for two consecutive cycles
+# (proposal §2.8). Convergence check is decided at runtime, not here.

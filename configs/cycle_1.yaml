@@ -1,0 +1,139 @@
+# Cycle 1 — full 7B main run. Pre-launches only after Week-1 pilot passes
+# both gates. Architecture §3.1 / §3.2 source of truth.
+
+name: cycle_1_main_7b
+project: reflex-rlvr
+cycle_index: 1
+seed: 37
+
+base_model:
+  hf_id: Qwen/Qwen2.5-7B
+  layers: 28
+  hidden: 3584
+  variant: base
+  precision: bfloat16
+  tap_layer: 19                  # ⌊28 * 2/3⌋ = 19
+
+special_tokens:
+  think_open: <think>
+  think_close: </think>
+  latent: <latent>
+
+latent:
+  S_max: 32
+  S_min: 2
+  eps_max: 0.10                  # cycle 1 = 0.10
+  schedule: cosine_anneal
+  dtype_residual: float32
+  max_think_blocks_per_response: 8
+
+halting:
+  warmup_steps: 500
+  warmup_target: delta_h_norm_lt_0p05_for_2_consec
+  ppo_clip: 0.1
+  value_head:
+    hidden_div: 4
+    activation: silu
+    loss: huber
+  lambda_step_max: 0.005
+  lambda_step_anneal_frac: 0.5
+
+rl:
+  algorithm: grpo_async_pipelinerl
+  group_size: 16
+  rollout_temperature: 0.8
+  top_p: 0.95
+  max_response_length: 8192
+  kl_coef_vs_ref: 0.001
+  kl_sweep_in_ablations: [0.001, 0.005, 0.02]
+  ppo_clip: 0.2
+  optimizer: adamw
+  lr_policy: 1.0e-6
+  lr_heads: 5.0e-6
+  warmup_steps: 200
+  effective_batch_prompts: 256
+  rollouts_per_prompt: 16
+  total_steps: 5000
+
+novelty:
+  beta_start: 0.0
+  beta_end: 0.2
+  ramp_start_frac: 0.5
+  metric: sae_feature_l1_relative
+  hard_clip: 5.0
+  per_group_rank_test: true
+  reference_profile: frozen_pre_cycle_1_base
+
+nsr:
+  lambda: 0.5
+  confidence_def: mean_token_margin_sigmoid
+
+sae:
+  k: 64
+  dict_size: 32768
+  tap_layer: 19
+  training_tokens: 200_000_000
+  re_train_per_cycle: false
+  quality_gates:
+    explained_variance_min: 0.92
+    auto_interpretability_topk_pct_min: 0.75
+    absorption_rate_max: 0.15
+
+curriculum:
+  bands:
+    band_easy:   {lsr_min: 0.5,   lsr_max: 1.0,   mix_pct: 10}
+    band_target: {lsr_min: 0.05,  lsr_max: 0.5,   mix_pct: 70}
+    band_hard:   {lsr_min: 0.0,   lsr_max: 0.05,  mix_pct: 20}
+    band_zero:   {lsr_min: 0.0,   lsr_max: 0.0,   mix_pct: 0}
+
+verifier_mix:
+  math_pct: 50
+  code_pct: 30
+  arc_pct: 5
+  lean_pct: 15                   # hard-cap per architecture §5.2
+
+translator:
+  base: Qwen/Qwen2.5-7B
+  lora_rank: 64
+  lora_alpha: 128
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  lr: 2.0e-5
+  batch: 64
+  epochs_per_cycle: 2
+  lambda_len: 0.05
+  lambda_kl: 0.01
+
+ldpt_acceptance:
+  pass_at_n: 8
+  pass_at_n_threshold: 0.5
+  ppl_ratio_max: 2.0
+  step_shuffle_max_pass_at_8: 0.25
+  truncated_y_max_pass_at_8: 0.4
+  attribution_min: 0.3
+  length_cap_factor: 2.0
+
+sft:
+  mix_ratio_translated_to_original: [1, 3]
+  original_sft_sources: [openmathinstruct2, open_orca]
+  sft_sources_decontaminated_against: H_K_eval
+  lr: 5.0e-6
+  epochs: 0.5
+  lambda_anchor_vs_pre_cycle_1_base: 0.002
+  forgetting_suite:
+    - math_500
+    - aime_2024
+    - bbh_algorithmic
+    - mmlu_pro
+    - gpqa_diamond
+    - humaneval_plus
+  forgetting_threshold_pp: 3.0
+  cumulative_forgetting_abort_threshold_pp: 4.0
+
+modal:
+  gpu: H100
+  n_gpus_train: 8
+  n_gpus_rollout: 8
+  detach: false
+  retry_on_disconnect: false
+
+budget_usd_estimate: 4200          # architecture §8.1 main RL line item

@@ -1,0 +1,18 @@
+model,slug,n_problems,mean_disc_signal,disc_signal_ci_lo,disc_signal_ci_hi,pct_oracle_above,mean_delta_oracle,mean_delta_corrupted,cohens_d_paired,cliffs_delta,gate_passed
+Gemma-2-9B (base),gemma_9b,51,2.2755,2.0944,2.4777,1.0,1.4797,-0.7957,3.2892,1.0,True
+Llama-3.1-8B (base),llama_3p1_8b,51,3.3283,3.0437,3.6043,1.0,1.8939,-1.4344,3.3605,1.0,True
+llama_3p1_8b_seed271828,llama_3p1_8b_seed271828,51,3.378,3.0933,3.6445,1.0,1.9195,-1.4584,3.3449,1.0,True
+llama_3p1_8b_seed31415,llama_3p1_8b_seed31415,51,3.3415,3.0616,3.6631,0.98,1.8415,-1.5001,2.9392,0.9608,True
+llama_3p1_8b_seed37,llama_3p1_8b_seed37,51,3.374,3.094,3.6475,1.0,1.8721,-1.5019,3.1677,1.0,True
+Mistral-7B-v0.3 (base),mistral_7b,51,2.1353,1.9471,2.3253,1.0,1.2739,-0.8615,3.0995,1.0,True
+Qwen2.5-1.5B (base),qwen_1p5b,51,2.5756,2.3967,2.7639,1.0,1.3903,-1.1853,3.7544,1.0,True
+Qwen2.5-1.5B-Instruct,qwen_1p5b_instruct,51,2.9981,2.7628,3.2096,1.0,1.6181,-1.38,3.7277,1.0,True
+Qwen2.5-72B (base),qwen_72b,51,2.3819,2.2219,2.5477,1.0,1.6637,-0.7182,4.0309,1.0,True
+Qwen2.5-7B (base),qwen_7b,51,2.4974,2.3071,2.6789,1.0,1.5887,-0.9087,3.8509,1.0,True
+Qwen2.5-7B-Instruct,qwen_7b_instruct,51,3.2909,3.0541,3.5447,1.0,2.0936,-1.1973,3.5424,1.0,True
+qwen_7b_instruct_seed271828,qwen_7b_instruct_seed271828,51,3.2733,3.0369,3.4906,1.0,2.1237,-1.1496,3.9519,1.0,True
+qwen_7b_instruct_seed31415,qwen_7b_instruct_seed31415,51,3.2748,3.004,3.5191,0.98,2.0601,-1.2147,3.5326,0.9608,True
+qwen_7b_instruct_seed37,qwen_7b_instruct_seed37,51,3.3032,3.0007,3.5882,1.0,2.0592,-1.244,3.1239,1.0,True
+DeepSeek-R1-Distill-Llama-8B,r1_llama_8b,51,2.9165,2.6257,3.2292,1.0,1.722,-1.1945,2.6757,1.0,True
+DeepSeek-R1-Distill-Qwen-1.5B,r1_qwen_1p5b,51,2.0542,1.8253,2.2979,1.0,1.1415,-0.9127,2.3274,1.0,True
+DeepSeek-R1-Distill-Qwen-7B,r1_qwen_7b,51,2.1064,1.909,2.3181,1.0,1.3061,-0.8004,2.8534,1.0,True

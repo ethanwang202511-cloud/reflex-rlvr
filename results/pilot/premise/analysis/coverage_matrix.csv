@@ -1,0 +1,25 @@
+model,consistent_corruption,verdict,per_token_surprise
+DeepSeek-R1-Distill-Llama-8B,PASS,PASS,PASS
+DeepSeek-R1-Distill-Qwen-1.5B,PASS,PASS,PASS
+DeepSeek-R1-Distill-Qwen-7B,PASS,PASS,PASS
+Gemma-2-9B (base),PASS,FAIL,PASS
+Llama-3.1-8B (base),PASS,FAIL,PASS
+Mistral-7B-v0.3 (base),PASS,FAIL,PASS
+Qwen2.5-1.5B (base),PASS,PASS,PASS
+Qwen2.5-1.5B-Instruct,PASS,PASS,PASS
+Qwen2.5-72B (base),PASS,PASS,PASS
+Qwen2.5-7B (base),PASS,PASS,PASS
+Qwen2.5-7B-Instruct,PASS,PASS,PASS
+gemma_9b_seed271828,—,FAIL,—
+gemma_9b_seed31415,—,FAIL,—
+gemma_9b_seed37,—,FAIL,—
+llama_3p1_8b_seed271828,PASS,FAIL,—
+llama_3p1_8b_seed31415,PASS,FAIL,—
+llama_3p1_8b_seed37,PASS,FAIL,—
+llama_3p1_8b_sft,—,PASS,—
+mistral_7b_seed271828,—,PASS,—
+mistral_7b_seed31415,—,PASS,—
+mistral_7b_seed37,—,PASS,—
+qwen_7b_instruct_seed271828,PASS,PASS,—
+qwen_7b_instruct_seed31415,PASS,PASS,—
+qwen_7b_instruct_seed37,PASS,PASS,—

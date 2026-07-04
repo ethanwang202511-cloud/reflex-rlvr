@@ -1,0 +1,46 @@
+{
+  "aime": {
+    "label": "aime_2018_2023",
+    "source": "results/pilot/premise/premise_test_1p5b.jsonl",
+    "n_problems": 51,
+    "n_passing_per_problem": 0,
+    "pct_passing_per_problem": 0.0,
+    "mean_p_disc_oracle": 0.0123,
+    "mean_p_disc_corrupted": 0.0123,
+    "delta_means": 0.0,
+    "paired_sign_test": {
+      "n_pos": 0,
+      "n_neg": 0,
+      "n_eff": 0,
+      "p_value": 1.0,
+      "reject_h0": false
+    },
+    "gate_a_per_problem_60pct": false,
+    "gate_a_sign_test_alpha_05": false,
+    "gate_a_means_thresholds": false
+  },
+  "synthetic": {
+    "label": "synthetic",
+    "source": "results/pilot/premise/premise_test_synthetic.jsonl",
+    "n_problems": 50,
+    "n_passing_per_problem": 1,
+    "pct_passing_per_problem": 0.02,
+    "mean_p_disc_oracle": 0.16,
+    "mean_p_disc_corrupted": 0.165,
+    "delta_means": -0.005,
+    "paired_sign_test": {
+      "n_pos": 12,
+      "n_neg": 14,
+      "n_eff": 26,
+      "p_value": 0.7214014530181885,
+      "reject_h0": false
+    },
+    "gate_a_per_problem_60pct": false,
+    "gate_a_sign_test_alpha_05": false,
+    "gate_a_means_thresholds": false
+  },
+  "aime_gate_a_pass": false,
+  "synthetic_gate_a_pass": false,
+  "memorization_control_consistent": true,
+  "final_gate_a_pass": false
+}

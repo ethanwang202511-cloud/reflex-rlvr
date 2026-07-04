@@ -1,0 +1,12 @@
+model,slug,n_problems,mean_delta_at_window,window_ci_lo,window_ci_hi,mean_delta_elsewhere,elsewhere_ci_lo,elsewhere_ci_hi,mean_local_minus_global,lmg_ci_lo,lmg_ci_hi,pct_positive_local_minus_global,cohens_d_paired,gate_passed
+Gemma-2-9B (base),gemma_9b,51,1.393,1.2836,1.4961,0.007,0.0052,0.0088,1.386,1.2829,1.4941,1.0,3.473,True
+Llama-3.1-8B (base),llama_3p1_8b,51,1.4219,1.3076,1.5336,0.0063,0.0047,0.0081,1.4157,1.3064,1.5244,1.0,3.4815,True
+Mistral-7B-v0.3 (base),mistral_7b,51,1.1884,1.0659,1.3216,0.0077,0.0058,0.0098,1.1807,1.0635,1.3019,1.0,2.6023,True
+Qwen2.5-1.5B (base),qwen_1p5b,51,1.2698,1.148,1.3966,0.0087,0.0066,0.0109,1.2611,1.1374,1.3837,1.0,2.8169,True
+Qwen2.5-1.5B-Instruct,qwen_1p5b_instruct,51,1.3251,1.2039,1.4473,0.0094,0.0074,0.0116,1.3157,1.1875,1.4393,1.0,2.8032,True
+Qwen2.5-72B (base),qwen_72b,51,1.4817,1.3611,1.5979,0.0067,0.005,0.0086,1.4749,1.3613,1.5805,1.0,3.462,True
+Qwen2.5-7B (base),qwen_7b,51,1.4249,1.3046,1.5514,0.0076,0.0055,0.0098,1.4173,1.2823,1.5558,1.0,3.0438,True
+Qwen2.5-7B-Instruct,qwen_7b_instruct,51,1.7661,1.593,1.93,0.0077,0.0051,0.0102,1.7584,1.5853,1.9275,1.0,2.8895,True
+DeepSeek-R1-Distill-Llama-8B,r1_llama_8b,51,1.7824,1.6404,1.9273,0.006,0.0039,0.0082,1.7763,1.6266,1.9226,1.0,3.3402,True
+DeepSeek-R1-Distill-Qwen-1.5B,r1_qwen_1p5b,51,1.4843,1.3373,1.6437,0.0108,0.0081,0.0136,1.4735,1.3179,1.6305,1.0,2.5514,True
+DeepSeek-R1-Distill-Qwen-7B,r1_qwen_7b,51,1.6234,1.4858,1.7557,0.0092,0.0064,0.0123,1.6142,1.4672,1.7514,1.0,3.0166,True

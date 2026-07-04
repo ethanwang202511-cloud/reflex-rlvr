@@ -1,0 +1,14 @@
+# Cycle 2 — eps_max = 0.15 (per architecture §3.1 staircase)
+# Inherits everything from cycle_1.yaml; overrides only what changes.
+
+name: cycle_2_main_7b
+cycle_index: 2
+inherits: cycle_1.yaml
+
+latent:
+  eps_max: 0.15
+
+# Refresh H_K against the *current* base (architecture §5.1 stage 1)
+# Mining is run between cycle 1 and cycle 2.
+mining:
+  refresh_against_current_base: true
