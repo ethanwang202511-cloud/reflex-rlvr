@@ -1,0 +1,11 @@
+{
+  "Qwen__Qwen2.5-1.5B": {
+    "consistent_corruption": {
+      "mean": NaN,
+      "std": 0.0,
+      "cv_pct": NaN,
+      "icc": null,
+      "n_seeds": 1
+    }
+  }
+}

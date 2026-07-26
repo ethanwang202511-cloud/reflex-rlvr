@@ -1,0 +1,12 @@
+[
+  {
+    "model": "Qwen/Qwen2.5-1.5B",
+    "probe": "consistent_corruption",
+    "seed": 1337,
+    "n_problems": 51,
+    "mean_score": 0.02824384748209784,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/Qwen__Qwen2.5-1.5B/consistent_corruption_seed1337.jsonl",
+    "elapsed_s": 38.8
+  }
+]

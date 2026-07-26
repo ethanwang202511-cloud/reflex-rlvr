@@ -1,0 +1,19 @@
+{
+  "n_models": 1,
+  "n_probes": 1,
+  "n_seeds": 4,
+  "median_cv_pct": null,
+  "mean_cv_pct": null,
+  "median_icc": null,
+  "mean_icc": null,
+  "per_model": {
+    "Qwen__Qwen2.5-1.5B": {
+      "consistent_corruption": {
+        "mean": NaN,
+        "std": 0.0,
+        "cv_pct": NaN,
+        "icc": null
+      }
+    }
+  }
+}
