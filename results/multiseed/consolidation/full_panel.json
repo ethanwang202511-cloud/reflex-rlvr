@@ -1,25 +1,268 @@
 {
-  "mistralai__Mistral-7B-v0.3": {
+  "Qwen__Qwen2.5-1.5B": {
     "consistent_corruption": {
-      "mean": NaN,
-      "std": NaN,
-      "cv_pct": NaN,
-      "icc": null,
-      "n_seeds": 4
+      "mean": 0.026484,
+      "std": 0.001961,
+      "cv_pct": 7.4,
+      "n_seeds": 4,
+      "seed_means": [
+        0.028244,
+        0.025593,
+        0.027955,
+        0.024143
+      ]
     },
     "verdict": {
-      "mean": NaN,
-      "std": NaN,
-      "cv_pct": NaN,
-      "icc": null,
-      "n_seeds": 4
+      "mean": 0.529144,
+      "std": 0.04868,
+      "cv_pct": 9.2,
+      "n_seeds": 4,
+      "seed_means": [
+        0.515299,
+        0.473441,
+        0.537492,
+        0.590342
+      ]
     },
     "per_token_surprise": {
-      "mean": NaN,
-      "std": NaN,
-      "cv_pct": NaN,
-      "icc": null,
-      "n_seeds": 4
+      "mean": 1.095366,
+      "std": 0.111501,
+      "cv_pct": 10.18,
+      "n_seeds": 4,
+      "seed_means": [
+        1.105083,
+        0.953969,
+        1.226552,
+        1.09586
+      ]
+    }
+  },
+  "Qwen__Qwen2.5-1.5B-Instruct": {
+    "consistent_corruption": {
+      "mean": 0.027935,
+      "std": 0.002134,
+      "cv_pct": 7.64,
+      "n_seeds": 4,
+      "seed_means": [
+        0.029793,
+        0.027047,
+        0.029565,
+        0.025335
+      ]
+    },
+    "verdict": {
+      "mean": 0.788789,
+      "std": 0.06904,
+      "cv_pct": 8.75,
+      "n_seeds": 4,
+      "seed_means": [
+        0.768914,
+        0.707546,
+        0.806246,
+        0.872451
+      ]
+    },
+    "per_token_surprise": {
+      "mean": 1.139446,
+      "std": 0.118274,
+      "cv_pct": 10.38,
+      "n_seeds": 4,
+      "seed_means": [
+        1.153955,
+        0.984551,
+        1.272524,
+        1.146755
+      ]
+    }
+  },
+  "Qwen__Qwen2.5-7B": {
+    "consistent_corruption": {
+      "mean": 0.027482,
+      "std": 0.002208,
+      "cv_pct": 8.03,
+      "n_seeds": 4,
+      "seed_means": [
+        0.02944,
+        0.026321,
+        0.029219,
+        0.024948
+      ]
+    },
+    "verdict": {
+      "mean": 1.325281,
+      "std": 0.053538,
+      "cv_pct": 4.04,
+      "n_seeds": 4,
+      "seed_means": [
+        1.358379,
+        1.279814,
+        1.279699,
+        1.383234
+      ]
+    },
+    "per_token_surprise": {
+      "mean": 1.256518,
+      "std": 0.122625,
+      "cv_pct": 9.76,
+      "n_seeds": 4,
+      "seed_means": [
+        1.284281,
+        1.10462,
+        1.400934,
+        1.236238
+      ]
+    }
+  },
+  "Qwen__Qwen2.5-7B-Instruct": {
+    "consistent_corruption": {
+      "mean": 0.032892,
+      "std": 0.002534,
+      "cv_pct": 7.7,
+      "n_seeds": 4,
+      "seed_means": [
+        0.035137,
+        0.030887,
+        0.035027,
+        0.030517
+      ]
+    },
+    "verdict": {
+      "mean": 6.943427,
+      "std": 0.269012,
+      "cv_pct": 3.87,
+      "n_seeds": 4,
+      "seed_means": [
+        7.164009,
+        6.931459,
+        6.568432,
+        7.109807
+      ]
+    },
+    "per_token_surprise": {
+      "mean": 1.588445,
+      "std": 0.153953,
+      "cv_pct": 9.69,
+      "n_seeds": 4,
+      "seed_means": [
+        1.64386,
+        1.378999,
+        1.743894,
+        1.587028
+      ]
+    }
+  },
+  "deepseek-ai__DeepSeek-R1-Distill-Qwen-1.5B": {
+    "consistent_corruption": {
+      "mean": 0.029271,
+      "std": 0.002793,
+      "cv_pct": 9.54,
+      "n_seeds": 4,
+      "seed_means": [
+        0.030623,
+        0.028122,
+        0.032349,
+        0.025989
+      ]
+    },
+    "verdict": {
+      "mean": 0.161973,
+      "std": 0.019811,
+      "cv_pct": 12.23,
+      "n_seeds": 4,
+      "seed_means": [
+        0.151654,
+        0.159544,
+        0.146168,
+        0.190525
+      ]
+    },
+    "per_token_surprise": {
+      "mean": 1.421805,
+      "std": 0.142732,
+      "cv_pct": 10.04,
+      "n_seeds": 4,
+      "seed_means": [
+        1.411445,
+        1.251532,
+        1.600729,
+        1.423516
+      ]
+    }
+  },
+  "deepseek-ai__DeepSeek-R1-Distill-Qwen-7B": {
+    "consistent_corruption": {
+      "mean": 0.028966,
+      "std": 0.001595,
+      "cv_pct": 5.51,
+      "n_seeds": 4,
+      "seed_means": [
+        0.030823,
+        0.028098,
+        0.029684,
+        0.027259
+      ]
+    },
+    "verdict": {
+      "mean": 0.377757,
+      "std": 0.020369,
+      "cv_pct": 5.39,
+      "n_seeds": 4,
+      "seed_means": [
+        0.375661,
+        0.395134,
+        0.349849,
+        0.390386
+      ]
+    },
+    "per_token_surprise": {
+      "mean": 1.552237,
+      "std": 0.136767,
+      "cv_pct": 8.81,
+      "n_seeds": 4,
+      "seed_means": [
+        1.536314,
+        1.378236,
+        1.708642,
+        1.585755
+      ]
+    }
+  },
+  "mistralai__Mistral-7B-v0.3": {
+    "consistent_corruption": {
+      "mean": 0.0239,
+      "std": 0.001538,
+      "cv_pct": 6.43,
+      "n_seeds": 4,
+      "seed_means": [
+        0.024665,
+        0.023606,
+        0.025442,
+        0.021889
+      ]
+    },
+    "verdict": {
+      "mean": 0.051697,
+      "std": 0.003458,
+      "cv_pct": 6.69,
+      "n_seeds": 4,
+      "seed_means": [
+        0.052773,
+        0.052623,
+        0.054687,
+        0.046706
+      ]
+    },
+    "per_token_surprise": {
+      "mean": 1.071907,
+      "std": 0.101054,
+      "cv_pct": 9.43,
+      "n_seeds": 4,
+      "seed_means": [
+        1.051088,
+        0.958084,
+        1.20319,
+        1.075267
+      ]
     }
   }
 }
