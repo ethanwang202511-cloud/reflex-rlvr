@@ -1,0 +1,40 @@
+{
+  "mistralai__Mistral-7B-v0.3": {
+    "consistent_corruption": {
+      "mean": NaN,
+      "std": NaN,
+      "cv_pct": NaN,
+      "seeds_used": [
+        1337,
+        37,
+        31415,
+        271828
+      ],
+      "n_seeds": 4
+    },
+    "verdict": {
+      "mean": NaN,
+      "std": NaN,
+      "cv_pct": NaN,
+      "seeds_used": [
+        1337,
+        37,
+        31415,
+        271828
+      ],
+      "n_seeds": 4
+    },
+    "per_token_surprise": {
+      "mean": NaN,
+      "std": NaN,
+      "cv_pct": NaN,
+      "seeds_used": [
+        1337,
+        37,
+        31415,
+        271828
+      ],
+      "n_seeds": 4
+    }
+  }
+}

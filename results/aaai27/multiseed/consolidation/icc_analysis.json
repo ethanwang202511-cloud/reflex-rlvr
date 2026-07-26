@@ -1,0 +1,16 @@
+{
+  "mistralai__Mistral-7B-v0.3": {
+    "consistent_corruption": {
+      "status": "insufficient_data",
+      "n_seeds": 4
+    },
+    "verdict": {
+      "status": "insufficient_data",
+      "n_seeds": 4
+    },
+    "per_token_surprise": {
+      "status": "insufficient_data",
+      "n_seeds": 4
+    }
+  }
+}

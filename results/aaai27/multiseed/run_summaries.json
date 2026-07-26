@@ -1,0 +1,122 @@
+[
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "consistent_corruption",
+    "seed": 1337,
+    "n_problems": 51,
+    "mean_score": 0.024664992172972088,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/consistent_corruption_seed1337.jsonl",
+    "elapsed_s": 24.4
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "consistent_corruption",
+    "seed": 37,
+    "n_problems": 51,
+    "mean_score": 0.023606133919619174,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/consistent_corruption_seed37.jsonl",
+    "elapsed_s": 20.5
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "consistent_corruption",
+    "seed": 31415,
+    "n_problems": 51,
+    "mean_score": 0.025441704058097685,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/consistent_corruption_seed31415.jsonl",
+    "elapsed_s": 17.7
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "consistent_corruption",
+    "seed": 271828,
+    "n_problems": 51,
+    "mean_score": 0.02188858524503819,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/consistent_corruption_seed271828.jsonl",
+    "elapsed_s": 17.4
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "verdict",
+    "seed": 1337,
+    "n_problems": 51,
+    "mean_score": 0.05277267156862745,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/verdict_seed1337.jsonl",
+    "elapsed_s": 55.5
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "verdict",
+    "seed": 37,
+    "n_problems": 51,
+    "mean_score": 0.05262315039541207,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/verdict_seed37.jsonl",
+    "elapsed_s": 56.9
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "verdict",
+    "seed": 31415,
+    "n_problems": 51,
+    "mean_score": 0.0546873504040288,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/verdict_seed31415.jsonl",
+    "elapsed_s": 60.2
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "verdict",
+    "seed": 271828,
+    "n_problems": 51,
+    "mean_score": 0.046706405340456496,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/verdict_seed271828.jsonl",
+    "elapsed_s": 68.1
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "per_token_surprise",
+    "seed": 1337,
+    "n_problems": 51,
+    "mean_score": 1.0510883898152559,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/per_token_surprise_seed1337.jsonl",
+    "elapsed_s": 10.6
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "per_token_surprise",
+    "seed": 37,
+    "n_problems": 50,
+    "mean_score": 0.9580842741825074,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/per_token_surprise_seed37.jsonl",
+    "elapsed_s": 11.6
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "per_token_surprise",
+    "seed": 31415,
+    "n_problems": 50,
+    "mean_score": 1.203189755166226,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/per_token_surprise_seed31415.jsonl",
+    "elapsed_s": 11.4
+  },
+  {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "probe": "per_token_surprise",
+    "seed": 271828,
+    "n_problems": 51,
+    "mean_score": 1.0752671015546105,
+    "gate_passed": true,
+    "output_path": "results/multiseed/runs/mistralai__Mistral-7B-v0.3/per_token_surprise_seed271828.jsonl",
+    "elapsed_s": 12.2
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "n_models": 1,
+  "n_probes": 3,
+  "n_seeds": 4,
+  "median_cv_pct": null,
+  "mean_cv_pct": null,
+  "median_icc": null,
+  "mean_icc": null,
+  "per_model": {
+    "mistralai__Mistral-7B-v0.3": {
+      "consistent_corruption": {
+        "mean": NaN,
+        "std": NaN,
+        "cv_pct": NaN,
+        "icc": null
+      },
+      "verdict": {
+        "mean": NaN,
+        "std": NaN,
+        "cv_pct": NaN,
+        "icc": null
+      },
+      "per_token_surprise": {
+        "mean": NaN,
+        "std": NaN,
+        "cv_pct": NaN,
+        "icc": null
+      }
+    }
+  }
+}
