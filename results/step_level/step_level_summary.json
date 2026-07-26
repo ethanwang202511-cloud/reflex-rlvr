@@ -1,0 +1,36 @@
+{
+  "models": {
+    "Qwen2.5-7B-Instruct": {
+      "model": "Qwen2.5-7B-Instruct",
+      "phase_4a": {
+        "n_problems": 51,
+        "mean_step_auroc": 0.9,
+        "std_step_auroc": 0.1722,
+        "top1_accuracy": 0.6667,
+        "mean_random_baseline": 0.1141,
+        "n_valid_auroc": 51
+      },
+      "phase_4b": {
+        "n_problems": 51,
+        "mean_divergence_step": 8.68,
+        "n_diverged": 41,
+        "pct_diverged": 0.8039,
+        "exact_match_rate": 0.5098,
+        "within_1_rate": 0.6078,
+        "mean_gap_before": 0.0,
+        "mean_gap_after": 3.9402
+      }
+    }
+  },
+  "comparison": [
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "step_auroc": 0.9,
+      "top1_acc": 0.6667,
+      "random_baseline": 0.1141,
+      "pct_diverged": 0.8039,
+      "exact_match_rate": 0.5098,
+      "mean_gap_after": 3.9402
+    }
+  ]
+}
