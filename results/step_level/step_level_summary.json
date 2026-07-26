@@ -1,36 +1,126 @@
 {
   "models": {
-    "Qwen2.5-7B-Instruct": {
-      "model": "Qwen2.5-7B-Instruct",
+    "Qwen2.5-7B": {
+      "model": "Qwen2.5-7B",
       "phase_4a": {
         "n_problems": 51,
-        "mean_step_auroc": 0.9,
-        "std_step_auroc": 0.1722,
+        "mean_step_auroc": 0.8967,
+        "std_step_auroc": 0.175,
         "top1_accuracy": 0.6667,
         "mean_random_baseline": 0.1141,
         "n_valid_auroc": 51
       },
       "phase_4b": {
         "n_problems": 51,
-        "mean_divergence_step": 8.68,
-        "n_diverged": 41,
-        "pct_diverged": 0.8039,
-        "exact_match_rate": 0.5098,
-        "within_1_rate": 0.6078,
-        "mean_gap_before": 0.0,
-        "mean_gap_after": 3.9402
+        "mean_divergence_step": 9.89,
+        "n_diverged": 28,
+        "pct_diverged": 0.549,
+        "exact_match_rate": 0.2157,
+        "within_1_rate": 0.2941,
+        "mean_gap_before": 0.0002,
+        "mean_gap_after": 0.6243
+      }
+    },
+    "Qwen2.5-1.5B-Instruct": {
+      "model": "Qwen2.5-1.5B-Instruct",
+      "phase_4a": {
+        "n_problems": 51,
+        "mean_step_auroc": 0.9038,
+        "std_step_auroc": 0.1733,
+        "top1_accuracy": 0.7059,
+        "mean_random_baseline": 0.1141,
+        "n_valid_auroc": 51
+      },
+      "phase_4b": {
+        "n_problems": 51,
+        "mean_divergence_step": 10.76,
+        "n_diverged": 21,
+        "pct_diverged": 0.4118,
+        "exact_match_rate": 0.1765,
+        "within_1_rate": 0.2157,
+        "mean_gap_before": -0.0002,
+        "mean_gap_after": 0.2653
+      }
+    },
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "model": "DeepSeek-R1-Distill-Qwen-7B",
+      "phase_4a": {
+        "n_problems": 51,
+        "mean_step_auroc": 0.901,
+        "std_step_auroc": 0.1689,
+        "top1_accuracy": 0.6667,
+        "mean_random_baseline": 0.1141,
+        "n_valid_auroc": 51
+      },
+      "phase_4b": {
+        "n_problems": 51,
+        "mean_divergence_step": 9.09,
+        "n_diverged": 23,
+        "pct_diverged": 0.451,
+        "exact_match_rate": 0.1961,
+        "within_1_rate": 0.2745,
+        "mean_gap_before": -0.0,
+        "mean_gap_after": 0.2666
+      }
+    },
+    "Mistral-7B-v0.3": {
+      "model": "Mistral-7B-v0.3",
+      "phase_4a": {
+        "n_problems": 51,
+        "mean_step_auroc": 0.8825,
+        "std_step_auroc": 0.2141,
+        "top1_accuracy": 0.6667,
+        "mean_random_baseline": 0.1141,
+        "n_valid_auroc": 51
+      },
+      "phase_4b": {
+        "n_problems": 51,
+        "mean_divergence_step": null,
+        "n_diverged": 0,
+        "pct_diverged": 0.0,
+        "exact_match_rate": 0.0,
+        "within_1_rate": 0.0,
+        "mean_gap_before": 0.0002,
+        "mean_gap_after": 0.014
       }
     }
   },
   "comparison": [
     {
-      "model": "Qwen2.5-7B-Instruct",
-      "step_auroc": 0.9,
+      "model": "Qwen2.5-7B",
+      "step_auroc": 0.8967,
       "top1_acc": 0.6667,
       "random_baseline": 0.1141,
-      "pct_diverged": 0.8039,
-      "exact_match_rate": 0.5098,
-      "mean_gap_after": 3.9402
+      "pct_diverged": 0.549,
+      "exact_match_rate": 0.2157,
+      "mean_gap_after": 0.6243
+    },
+    {
+      "model": "Qwen2.5-1.5B-Instruct",
+      "step_auroc": 0.9038,
+      "top1_acc": 0.7059,
+      "random_baseline": 0.1141,
+      "pct_diverged": 0.4118,
+      "exact_match_rate": 0.1765,
+      "mean_gap_after": 0.2653
+    },
+    {
+      "model": "DeepSeek-R1-Distill-Qwen-7B",
+      "step_auroc": 0.901,
+      "top1_acc": 0.6667,
+      "random_baseline": 0.1141,
+      "pct_diverged": 0.451,
+      "exact_match_rate": 0.1961,
+      "mean_gap_after": 0.2666
+    },
+    {
+      "model": "Mistral-7B-v0.3",
+      "step_auroc": 0.8825,
+      "top1_acc": 0.6667,
+      "random_baseline": 0.1141,
+      "pct_diverged": 0.0,
+      "exact_match_rate": 0.0,
+      "mean_gap_after": 0.014
     }
   ]
 }
