@@ -1,13 +1,40 @@
 {
-  "Qwen__Qwen2.5-1.5B": {
+  "mistralai__Mistral-7B-v0.3": {
     "consistent_corruption": {
       "mean": NaN,
-      "std": 0.0,
+      "std": NaN,
       "cv_pct": NaN,
       "seeds_used": [
-        1337
+        1337,
+        37,
+        31415,
+        271828
       ],
-      "n_seeds": 1
+      "n_seeds": 4
+    },
+    "verdict": {
+      "mean": NaN,
+      "std": NaN,
+      "cv_pct": NaN,
+      "seeds_used": [
+        1337,
+        37,
+        31415,
+        271828
+      ],
+      "n_seeds": 4
+    },
+    "per_token_surprise": {
+      "mean": NaN,
+      "std": NaN,
+      "cv_pct": NaN,
+      "seeds_used": [
+        1337,
+        37,
+        31415,
+        271828
+      ],
+      "n_seeds": 4
     }
   }
 }

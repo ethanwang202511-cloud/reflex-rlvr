@@ -1,8 +1,16 @@
 {
-  "Qwen__Qwen2.5-1.5B": {
+  "mistralai__Mistral-7B-v0.3": {
     "consistent_corruption": {
       "status": "insufficient_data",
-      "n_seeds": 1
+      "n_seeds": 4
+    },
+    "verdict": {
+      "status": "insufficient_data",
+      "n_seeds": 4
+    },
+    "per_token_surprise": {
+      "status": "insufficient_data",
+      "n_seeds": 4
     }
   }
 }
