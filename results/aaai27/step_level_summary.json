@@ -1,0 +1,66 @@
+{
+  "models": {
+    "Qwen2.5-1.5B": {
+      "model": "Qwen2.5-1.5B",
+      "phase_4a": {
+        "n_problems": 51,
+        "mean_step_auroc": 0.9038,
+        "std_step_auroc": 0.1733,
+        "top1_accuracy": 0.7059,
+        "mean_random_baseline": 0.1141,
+        "n_valid_auroc": 51
+      },
+      "phase_4b": {
+        "n_problems": 51,
+        "mean_divergence_step": 9.82,
+        "n_diverged": 17,
+        "pct_diverged": 0.3333,
+        "exact_match_rate": 0.1569,
+        "within_1_rate": 0.1961,
+        "mean_gap_before": -0.0,
+        "mean_gap_after": 0.1855
+      }
+    },
+    "DeepSeek-R1-Distill-Qwen-1.5B": {
+      "model": "DeepSeek-R1-Distill-Qwen-1.5B",
+      "phase_4a": {
+        "n_problems": 51,
+        "mean_step_auroc": 0.9041,
+        "std_step_auroc": 0.1733,
+        "top1_accuracy": 0.7059,
+        "mean_random_baseline": 0.1141,
+        "n_valid_auroc": 51
+      },
+      "phase_4b": {
+        "n_problems": 51,
+        "mean_divergence_step": 13.0,
+        "n_diverged": 7,
+        "pct_diverged": 0.1373,
+        "exact_match_rate": 0.0588,
+        "within_1_rate": 0.0588,
+        "mean_gap_before": 0.0,
+        "mean_gap_after": 0.1191
+      }
+    }
+  },
+  "comparison": [
+    {
+      "model": "Qwen2.5-1.5B",
+      "step_auroc": 0.9038,
+      "top1_acc": 0.7059,
+      "random_baseline": 0.1141,
+      "pct_diverged": 0.3333,
+      "exact_match_rate": 0.1569,
+      "mean_gap_after": 0.1855
+    },
+    {
+      "model": "DeepSeek-R1-Distill-Qwen-1.5B",
+      "step_auroc": 0.9041,
+      "top1_acc": 0.7059,
+      "random_baseline": 0.1141,
+      "pct_diverged": 0.1373,
+      "exact_match_rate": 0.0588,
+      "mean_gap_after": 0.1191
+    }
+  ]
+}
